@@ -1,0 +1,76 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.results-panel {
+  @include card;
+  overflow: hidden;
+
+  &__header {
+    @include flex-between;
+    padding: $spacing-sm $spacing-md;
+    background: $color-surface-alt;
+    border-bottom: 1px solid $color-border;
+
+    h4 {
+      font-size: $font-size-sm;
+      font-weight: 600;
+    }
+
+    span {
+      font-size: $font-size-xs;
+      color: $color-text-muted;
+    }
+  }
+
+  &__table-wrap {
+    overflow-x: auto;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: $font-size-sm;
+    font-family: $font-mono;
+
+    th, td {
+      padding: $spacing-xs $spacing-sm;
+      border-bottom: 1px solid $color-border;
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      background: $color-surface-alt;
+      color: $color-text-muted;
+      font-weight: 600;
+    }
+
+    td {
+      color: $color-text;
+    }
+
+    tr:hover td {
+      background: rgba($color-primary, 0.05);
+    }
+  }
+
+  &__empty {
+    padding: $spacing-xl;
+    text-align: center;
+    color: $color-text-dim;
+    font-size: $font-size-sm;
+  }
+
+  &__error {
+    padding: $spacing-md;
+    color: $color-danger;
+    font-size: $font-size-sm;
+    background: rgba($color-danger, 0.08);
+    border-radius: 0;
+    font-family: $font-mono;
+  }
+}
