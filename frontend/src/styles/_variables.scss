@@ -1,0 +1,52 @@
+// Breakpoints (mobile-first: 320px, 641px, 1024px, 1281px)
+$bp-mobile: 320px;
+$bp-tablet: 641px;
+$bp-desktop: 1024px;
+$bp-wide: 1281px;
+
+// Colors
+$color-bg: #0f1117;
+$color-surface: #1a1d27;
+$color-surface-alt: #232736;
+$color-border: #2e3348;
+$color-primary: #6c63ff;
+$color-primary-hover: #5a52e0;
+$color-success: #22c55e;
+$color-warning: #f59e0b;
+$color-danger: #ef4444;
+$color-text: #e4e4e7;
+$color-text-muted: #9ca3af;
+$color-text-dim: #6b7280;
+
+// Typography
+$font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-base: 1rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.25rem;
+$font-size-2xl: 1.5rem;
+$font-size-3xl: 2rem;
+
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-2xl: 3rem;
+
+// Radius
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 12px;
+
+// Shadows
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+$shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+$shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+
+// Transitions
+$transition-fast: 150ms ease;
+$transition-base: 250ms ease;
