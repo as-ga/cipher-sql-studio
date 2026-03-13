@@ -1,0 +1,54 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.sql-editor {
+  @include card;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    @include flex-between;
+    padding: $spacing-sm $spacing-md;
+    background: $color-surface-alt;
+    border-bottom: 1px solid $color-border;
+
+    h4 {
+      font-size: $font-size-sm;
+      font-weight: 600;
+    }
+  }
+
+  &__monaco {
+    min-height: 200px;
+    flex: 1;
+  }
+
+  &__actions {
+    @include flex-between;
+    padding: $spacing-sm $spacing-md;
+    border-top: 1px solid $color-border;
+    background: $color-surface-alt;
+  }
+
+  &__run-btn {
+    @include btn-base;
+    background: $color-primary;
+    color: #fff;
+
+    &:hover:not(:disabled) {
+      background: $color-primary-hover;
+    }
+  }
+
+  &__clear-btn {
+    @include btn-base;
+    background: transparent;
+    color: $color-text-muted;
+    border: 1px solid $color-border;
+
+    &:hover {
+      border-color: $color-text-muted;
+    }
+  }
+}
