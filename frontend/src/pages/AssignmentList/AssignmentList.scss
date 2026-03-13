@@ -1,0 +1,110 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.assignment-list {
+  &__header {
+    margin-bottom: $spacing-xl;
+
+    h1 {
+      font-size: $font-size-2xl;
+      font-weight: 700;
+      margin-bottom: $spacing-xs;
+    }
+
+    p {
+      color: $color-text-muted;
+      font-size: $font-size-sm;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+
+    @include respond(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__loading,
+  &__error {
+    @include flex-center;
+    min-height: 300px;
+    color: $color-text-muted;
+    font-size: $font-size-lg;
+  }
+
+  &__error {
+    color: $color-danger;
+  }
+}
+
+.assignment-card {
+  @include card;
+  padding: $spacing-lg;
+  transition: border-color $transition-fast, box-shadow $transition-fast;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+
+  &:hover {
+    border-color: $color-primary;
+    box-shadow: $shadow-md;
+  }
+
+  &__top {
+    @include flex-between;
+  }
+
+  &__badge {
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $radius-sm;
+    font-size: $font-size-xs;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    &--easy {
+      background: rgba($color-success, 0.15);
+      color: $color-success;
+    }
+
+    &--medium {
+      background: rgba($color-warning, 0.15);
+      color: $color-warning;
+    }
+
+    &--hard {
+      background: rgba($color-danger, 0.15);
+      color: $color-danger;
+    }
+  }
+
+  &__id {
+    color: $color-text-dim;
+    font-size: $font-size-xs;
+  }
+
+  &__title {
+    font-size: $font-size-lg;
+    font-weight: 600;
+  }
+
+  &__desc {
+    color: $color-text-muted;
+    font-size: $font-size-sm;
+    flex: 1;
+  }
+
+  &__footer {
+    margin-top: $spacing-sm;
+    color: $color-text-dim;
+    font-size: $font-size-xs;
+  }
+}
